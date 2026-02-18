@@ -26,7 +26,6 @@ export const InputForm: React.FC<InputFormProps> = ({
 }) => {
   const [internalInputValue, setInternalInputValue] = useState("");
   const [effort, setEffort] = useState("medium");
-  // const [model, setModel] = useState("gemini-2.5-flash-preview-04-17");
   const [model, setModel] = useState("gemini-2.5-flash");
 
   const handleInternalSubmit = (e?: React.FormEvent) => {
@@ -59,9 +58,9 @@ export const InputForm: React.FC<InputFormProps> = ({
           value={internalInputValue}
           onChange={(e) => setInternalInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Who won the Euro 2024 and scored the most goals?"
+          placeholder="What is the current situation of Calico Cloud in the kubernetes landscape?"
           className={`w-full text-neutral-100 placeholder-neutral-500 resize-none border-0 focus:outline-none focus:ring-0 outline-none focus-visible:ring-0 shadow-none
-                        md:text-base  min-h-[56px] max-h-[200px]`}
+                        md:text-base  min-h-[70px] max-h-[400px]`}
           rows={1}
         />
         <div className="-mt-3">
@@ -81,7 +80,7 @@ export const InputForm: React.FC<InputFormProps> = ({
               variant="ghost"
               className={`${isSubmitDisabled
                 ? "text-neutral-500"
-                : "text-blue-500 hover:text-blue-400 hover:bg-blue-500/10"
+                : "text-orange-400 hover:text-orange-500 hover:bg-orange-500/10"
                 } p-2 cursor-pointer rounded-full transition-all duration-200 text-base`}
               disabled={isSubmitDisabled}
             >
@@ -143,7 +142,6 @@ export const InputForm: React.FC<InputFormProps> = ({
                   </div>
                 </SelectItem>
                 <SelectItem
-                  // value="gemini-2.5-flash-preview-04-17"
                   value="gemini-2.5-flash"
                   className="hover:bg-neutral-600 focus:bg-neutral-600 cursor-pointer"
                 >
@@ -152,7 +150,6 @@ export const InputForm: React.FC<InputFormProps> = ({
                   </div>
                 </SelectItem>
                 <SelectItem
-                  // value="gemini-2.5-pro-preview-05-06"
                   value="gemini-2.5-pro"
                   className="hover:bg-neutral-600 focus:bg-neutral-600 cursor-pointer"
                 >
@@ -166,7 +163,7 @@ export const InputForm: React.FC<InputFormProps> = ({
         </div>
         {hasHistory && (
           <Button
-            className="bg-neutral-700 border-neutral-600 text-neutral-300 cursor-pointer rounded-xl rounded-t-sm pl-2 "
+            className="bg-neutral-700 border-orange-200 text-orange-400 cursor-pointer rounded-xl rounded-t-sm pl-2 "
             variant="default"
             onClick={() => window.location.reload()}
           >
@@ -175,6 +172,14 @@ export const InputForm: React.FC<InputFormProps> = ({
           </Button>
         )}
       </div>
+      {/* Horizontal Divider */}
+      <div className="my-3 h-[1px] w-full bg-neutral-500" />
+      <p className="text-xs text-center text-neutral-500">
+        This AI agent is a demo, & is built for research purposes only. Built by the internal development team at
+        <a href="https://tigera.io" target="_blank" rel="noopener noreferrer" className="ml-1 text-orange-400">
+          Tigera Inc.
+        </a>
+      </p>
     </form>
   );
 };
