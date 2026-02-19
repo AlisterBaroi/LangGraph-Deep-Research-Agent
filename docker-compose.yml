@@ -5,6 +5,8 @@ services:
   langgraph-redis:
     image: docker.io/redis:6
     container_name: langgraph-redis
+    ports:  # Added explicit port mapping here
+      - "6379:6379" # Added explicit port mapping here
     healthcheck:
       test: redis-cli ping
       interval: 5s
@@ -29,6 +31,7 @@ services:
       interval: 5s
   langgraph-api:
     image: gemini-fullstack-langgraph
+    # image: europe-west2-docker.pkg.dev/tigera-dev/langgraph-repo/gemini-fullstack-langgraph:latest
     container_name: langgraph-api
     ports:
       - "8123:8000"

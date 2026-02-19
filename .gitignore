@@ -5,6 +5,7 @@ frontend/.vite/
 frontend/coverage/
 .DS_Store
 *.local
+commands.txt
 
 # Logs
 logs
