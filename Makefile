@@ -20,6 +20,8 @@ dev-backend:
 # http://localhost:5173/app
 # sudo kill -9 `sudo lsof -t -i:5173`
 # sudo kill -9 `sudo lsof -t -i:2024`
+# `sudo lsof -t -i:5173`
+# `sudo lsof -t -i:2024`
 
 dev: 
 	@echo "Starting both frontend and backend development servers..."
