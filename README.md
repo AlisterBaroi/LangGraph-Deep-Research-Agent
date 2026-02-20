@@ -2,7 +2,7 @@
 
 This project demonstrates a fullstack application using a React frontend and a LangGraph-powered backend agent. The agent is designed to perform comprehensive research on a user's query by dynamically generating search terms, querying the web using Google Search, reflecting on the results to identify knowledge gaps, and iteratively refining its search until it can provide a well-supported answer with citations. This application serves as an example of building research-augmented conversational AI using LangGraph and Google's Gemini models.
 
-<img src="./main.png" title="LangGraph Research Agent" alt="LangGraph Research Agent">
+<img src="./app.png" title="LangGraph Research Agent" alt="LangGraph Research Agent">
 
 ## Features
 
@@ -116,7 +116,7 @@ _Note: If you are not running the docker-compose.yml example or exposing the bac
 **2. Run the Production Server:**
 
    ```bash
-   GEMINI_API_KEY=<your_gemini_api_key> LANGSMITH_API_KEY=<your_langsmith_api_key> docker-compose up
+   GEMINI_API_KEY=<your_gemini_api_key> LANGSMITH_API_KEY=<your_langsmith_api_key> docker compose up
    ```
 
 Open your browser and navigate to `http://localhost:8123/app/` to see the application. The API will be available at `http://localhost:8123`.

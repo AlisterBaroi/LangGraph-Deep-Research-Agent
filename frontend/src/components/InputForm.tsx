@@ -177,7 +177,6 @@ export const InputForm: React.FC<InputFormProps> = ({
       <p className="text-xs text-center text-neutral-500">
         This is a LangGraph Research Agent demo, built by
         <a href="https://github.com/alisterbaroi" target="_blank" rel="noopener noreferrer" className="ml-1 text-orange-400">
-          {/* <a href="https://tigera.io" target="_blank" rel="noopener noreferrer" className="ml-1 text-orange-400"> */}
           Alister Baroi
         </a>
       </p>
